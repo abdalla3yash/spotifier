@@ -7,9 +7,10 @@ class AppTheme {
     required BuildContext context,
   }) {
     return ThemeData(
+      scaffoldBackgroundColor: backgroundColor,
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
-          foregroundColor: Colors.white,
+          foregroundColor: whiteColor,
           backgroundColor: Colors.transparent,
           elevation: 0.0,
         ),
@@ -21,7 +22,10 @@ class AppTheme {
       ),
       inputDecorationTheme: InputDecorationTheme(
         focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(width: 1.5, color: spotifyColor),
+          borderSide: BorderSide(
+            width: 1.5,
+            color: spotifyColor,
+          ),
         ),
       ),
       listTileTheme: ListTileThemeData(
@@ -33,10 +37,10 @@ class AppTheme {
       brightness: Brightness.dark,
       appBarTheme: AppBarTheme(
         color: spotifyColor,
-        foregroundColor: Colors.white,
+        foregroundColor: whiteColor,
       ),
       canvasColor: spotifyColor,
-      cardColor: Colors.grey.shade900,
+      cardColor: cardColor,
       cardTheme: CardTheme(
         clipBehavior: Clip.antiAlias,
         elevation: 5,
@@ -44,11 +48,12 @@ class AppTheme {
           borderRadius: BorderRadius.circular(7.0),
         ),
       ),
-      dialogBackgroundColor: Colors.grey.shade900,
-      progressIndicatorTheme:
-          const ProgressIndicatorThemeData().copyWith(color: spotifyColor),
-      iconTheme: const IconThemeData(
-        color: Colors.white,
+      dialogBackgroundColor: cardColor,
+      progressIndicatorTheme: const ProgressIndicatorThemeData().copyWith(
+        color: spotifyColor,
+      ),
+      iconTheme: IconThemeData(
+        color: whiteColor,
         opacity: 1.0,
         size: 24.0,
       ),
